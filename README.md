@@ -1,10 +1,12 @@
 # EladsHUD+
 
-[Elad's HUD](https://thunderstore.io/c/lethal-company/p/EladNLG/EladsHUD/), updated for `V81` and expanded. The clean health / stamina / battery HUD you know, plus the `utility slot`, a `mic icon`, a `status row` for buffs, injuries and warnings, and battery support for AdvancedCompany's head items.
+[Elad's HUD](https://thunderstore.io/c/lethal-company/p/EladNLG/EladsHUD/), updated for `V81` and expanded. The clean health / stamina / battery HUD you know, plus the `utility slot`, a `mic icon`, a `status row` for buffs, injuries and warnings, an optional `crosshair`, `extra health` on the health bar, and battery support for AdvancedCompany's head items.
 
 Everything is client side and can be turned off in the config.
 
 > **Made to go with [TZPPlus](https://thunderstore.io/c/lethal-company/p/SleepyMiles/TZPPlus/), [FrailtyPlus](https://thunderstore.io/c/lethal-company/p/SleepyMiles/FrailtyPlus/), [FrailtyMedical](https://thunderstore.io/c/lethal-company/p/SleepyMiles/FrailtyMedical/) and [Drinkable](https://thunderstore.io/c/lethal-company/p/SleepyMiles/Drinkable/).** Their buffs and debuffs show up as icons under your health bar with the `time left` on each, and you can point at any icon to see what it does. Together they give you one place to see everything that is affecting you.
+
+<img src="https://raw.githubusercontent.com/SleepyMiles/EladsHUDPlus/main/images/eladshud.gif" width="360">
 
 ---
 
@@ -36,10 +38,32 @@ Everything is client side and can be turned off in the config.
 
 A row of icons under the health bar, with the `time left` or `value` on each:
 
-- **Frailty** injuries (broken / fractured legs and arms, bleeding, blinded, concussed), if Frailty is installed (made with **FrailtyPlus** in mind). Frailty's own icons are hidden while this is on.
+- **Frailty** injuries (broken / fractured legs and arms, bleeding, laceration, blinded, concussed, paralyzed, and FrailtyPlus' Infected / Blooming / Paranoid with their `%`), if Frailty is installed (made with **FrailtyPlus** in mind). Frailty's own icons are hidden while this is on. The tooltips name FrailtyMedical's items when it's installed.
 - **UsualScrap**'s Productivity Auto-Injector buff.
 - **TZPPlus** buffs and debuffs (Damage Reduction, Lethal Dose, Withdrawal and the vanilla TZP effects), and icons from any other mod that uses the EladsHUD+ status API.
 - The **vanilla warnings** (steam leak, Cadaver spores / fever, low oxygen) as text under the row. Elad's HUD used to hide them.
+
+</details>
+
+<details>
+<summary>❤️ Extra health</summary>
+
+- Extra health from other mods (FrailtyMedical's **Racing Heart** after an Epinephrine shot) shows as a `green` part of the health bar, and the number shows health + extra.
+- Damage takes the extra first, so the green shrinks first. The bar stays visible while it changes.
+- `ExtraHealthBar`: `SameLength` (the bar keeps its length, green right after your health), `LastPart` (green is always the last part of the bar) or `Extend` (the bar grows past its end; the utility slot moves along).
+- `ExtraHealthNumber`: `Total` (e.g. `130`) or `HealthPlusExtra` (e.g. `80 +50`).
+
+</details>
+
+<details>
+<summary>➕ Crosshair</summary>
+
+- The game has no crosshair: turn one on with `Enabled` (off by default).
+- Always white and faint by default (`Opacity` 0.55) so it blends in, with a thin dark outline.
+- Pick a frame (`Full`, `Corners`, `None`) and a mark (`OpenPlus`, `OpenPlusDot`, `Plus`, `Dot`, `None`), its `Size` and `Thickness`.
+- Show it `Always`, only while `HoldingItem`, or only while `HoldingWeapon` (shovel, stop sign, knife, shotgun...).
+- Hides while the game's hand icon shows (`HideOnInteract`), and when you're dead, at the terminal, in a menu, typing, in build mode or in cursor mode.
+- Every change applies right away (e.g. with LethalConfig).
 
 </details>
 
@@ -97,6 +121,8 @@ A row of icons under the health bar, with the `time left` or `value` on each:
 | Cursor | cursor key, hold to show |
 | UtilitySlot | next to the health bar, hide `[TAB]`, position |
 | Mic | show mic icon, show muted icon, icon style, position, size |
+| Health bar | how extra health shows on the bar and in the number |
+| Crosshair | on / off, frame and mark style, size, thickness, opacity, outline, when it shows, hide on interact |
 
 ---
 
@@ -105,7 +131,7 @@ A row of icons under the health bar, with the `time left` or `value` on each:
 - **Replaces Elad's HUD and FixEladsHUD.** Don't install them together. EladsHUD+ uses the same plugin ID, so mods made for Elad's HUD still find it.
 - **[TZPPlus](https://thunderstore.io/c/lethal-company/p/SleepyMiles/TZPPlus/)**: made to work together. Its buff / debuff icons go in the status row with time left and tooltips, and the bars change color with its effects.
 - **Frailty / [FrailtyPlus](https://thunderstore.io/c/lethal-company/p/SleepyMiles/FrailtyPlus/)**: made to work together. The injuries show in the status row with time left and tooltips.
-- **[FrailtyMedical](https://thunderstore.io/c/lethal-company/p/SleepyMiles/FrailtyMedical/)**: its buffs (Bandaged, Morphine, Last Breath, Immunity, ...) show in the status row with time left and tooltips.
+- **[FrailtyMedical](https://thunderstore.io/c/lethal-company/p/SleepyMiles/FrailtyMedical/)**: its buffs (Bandaged, Painless, Borrowed Time, Racing Heart, Pack Mule, ...) show in the status row with time left and tooltips, its buffs color the bars, and Racing Heart's extra health shows on the health bar.
 - **[Drinkable](https://thunderstore.io/c/lethal-company/p/SleepyMiles/Drinkable/)**: every drink buff and debuff shows in the status row with time left and tooltips.
 - **UsualScrap**: Productivity Auto-Injector icon and cyan stamina bar.
 - **AdvancedCompany**: head item batteries. The Battery Pack time left and the real stamina `/sec` (with perks) come from the SleepyMiles v.81 version of AdvancedCompany.
@@ -119,8 +145,8 @@ These mods are made by **SleepyMiles** to work as one set. They share one row of
 |---|---|
 | [TZPPlus](https://thunderstore.io/c/lethal-company/p/SleepyMiles/TZPPlus/) | The TZP heals you, shows its gas, builds up damage reduction (fall damage too). Too much gives a Lethal Dose. |
 | [FrailtyPlus](https://thunderstore.io/c/lethal-company/p/SleepyMiles/FrailtyPlus/) | Injuries: broken / fractured legs and arms, bleeding, concussions, Paralyze. A rebuilt Frailty. |
-| [FrailtyMedical](https://thunderstore.io/c/lethal-company/p/SleepyMiles/FrailtyMedical/) | *Beta.* Bandage, First Aid Kit, Morphine (revive a teammate), Epinephrine, Painkillers and Antibiotics to treat them. |
-| [Drinkable](https://thunderstore.io/c/lethal-company/p/SleepyMiles/Drinkable/) | Drink the Red soda and the pills, 9 new sodas with their own buffs, and the Soda Machine. |
+| [FrailtyMedical](https://thunderstore.io/c/lethal-company/p/SleepyMiles/FrailtyMedical/) | *Beta.* Bandage, First Aid Kit, Morphine (revive a teammate), Epinephrine, Antifungal, Steroids, Painkillers, Antibiotics and Sedatives to treat them. |
+| [Drinkable](https://thunderstore.io/c/lethal-company/p/SleepyMiles/Drinkable/) | Drink the Red soda, 19 new drinks with their own buffs, the Soda Machine and the Drink Machine. |
 | **EladsHUD+** (this mod) | Elad's HUD for V81, with a status row that shows every buff, debuff and injury from all of these with the `time left`. |
 
 ---

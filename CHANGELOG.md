@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.1.0
+
+<details>
+<summary>✨ Crosshair, extra health, new tooltips</summary>
+
+- **Crosshair** (off by default): frame + mark styles, size, thickness, opacity, when it shows. Hides while the hand icon shows.
+- **Extra health** on the health bar (FrailtyMedical's Racing Heart): a green part of the bar, and the number shows health + extra. `ExtraHealthBar` and `ExtraHealthNumber` settings. The green only covers its own part, so it never mixes into the health part (it used to turn it orange).
+- New tooltips for every FrailtyPlus injury, plus **Infected**, **Blooming** and **Paranoid** with their `%` under the icon (pulsing while it goes down).
+- Bleeding / Laceration / Fatal Bleeding tooltips name FrailtyMedical's items when it's installed.
+- StatusApi 2: `SetExtraHealth`.
+
+</details>
+
 ## 1.0.0
 
 <details>
