@@ -42,6 +42,7 @@ A row of icons under the health bar, with the `time left` or `value` on each:
 - **UsualScrap**'s Productivity Auto-Injector buff.
 - **TZPPlus** buffs and debuffs (Damage Reduction, Lethal Dose, Withdrawal and the vanilla TZP effects), and icons from any other mod that uses the EladsHUD+ status API.
 - The **vanilla warnings** (steam leak, Cadaver spores / fever, low oxygen) as text under the row. Elad's HUD used to hide them.
+- Every icon has a moving frame (its dashes change a few times a second), and the health bar's frame moves the same way (setting `AnimatedFrames`). Each picture is sized to sit inside its frame.
 
 </details>
 
@@ -115,7 +116,7 @@ A row of icons under the health bar, with the `time left` or `value` on each:
 | Section | What |
 |---|---|
 | General | Elad's original settings: HUD scale, auto-hide health bar, flashlight battery, stamina text, time left, planet info |
-| Status | warnings, Frailty injuries, buffs, colored buff numbers, injector stamina color, row position |
+| Status | warnings, Frailty injuries, buffs, colored buff numbers, injector stamina color, row position, animated frames |
 | Headwear | head item battery, show while off, flashlight icon gap, compact battery UI |
 | Outline | outline the HUD numbers |
 | Cursor | cursor key, hold to show |
@@ -139,7 +140,7 @@ A row of icons under the health bar, with the `time left` or `value` on each:
 
 ## Play them together
 
-These mods are made by **SleepyMiles** to work as one set. They share one row of buff / debuff icons (or EladsHUD+'s status row) and one **CONSUMABLES** store section, and they know about each other's effects. Each one also works on its own (FrailtyMedical needs FrailtyPlus).
+These mods are made by **SleepyMiles** to work as one set. They share one row of buff / debuff icons (or EladsHUD+'s status row) and the **DRINKS** / **MEDICAL** store sections, and they know about each other's effects. Each one also works on its own (FrailtyMedical needs FrailtyPlus).
 
 | Mod | What it adds |
 |---|---|
