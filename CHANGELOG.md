@@ -6,7 +6,7 @@
 <summary>✨ Animated frames, icon sizes</summary>
 
 - Every icon in the status row (FrailtyPlus' injuries and the buffs from TZPPlus, Drinkable and FrailtyMedical) has a moving frame, like FrailtyPlus' own icons: its dashes change a few times a second. The pictures don't blink here. Setting `AnimatedFrames` (Status, on by default).
-- Optional: the health bar's four corners move with them (the same corners as the icon frames). Setting `AnimatedHealthFrame` (Status, off by default).
+- Optional: the icon frame (its animation too) on the health bar's four corners, the same size as on the icons. Setting `AnimatedHealthFrame` (Status, off by default).
 - Pictures that were so big they ran over their frame are made just small enough to sit inside it; the others keep their size.
 
 </details>
