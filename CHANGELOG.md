@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.1
+
+<details>
+<summary>✨ Animated frames</summary>
+
+- Every icon in the status row (FrailtyPlus' injuries and the buffs from TZPPlus, Drinkable and FrailtyMedical) has a moving frame, like FrailtyPlus' own icons: its dashes change a few times a second. The pictures don't blink here.
+
+</details>
+
 ## 1.1.0
 
 <details>
