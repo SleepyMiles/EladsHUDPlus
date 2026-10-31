@@ -42,7 +42,7 @@ A row of icons under the health bar, with the `time left` or `value` on each:
 - **UsualScrap**'s Productivity Auto-Injector buff.
 - **TZPPlus** buffs and debuffs (Damage Reduction, Lethal Dose, Withdrawal and the vanilla TZP effects), and icons from any other mod that uses the EladsHUD+ status API.
 - The **vanilla warnings** (steam leak, Cadaver spores / fever, low oxygen) as text under the row. Elad's HUD used to hide them.
-- Every icon has a moving frame (its dashes change a few times a second), and the health bar's frame moves the same way (setting `AnimatedFrames`). Each picture is sized to sit inside its frame.
+- Every icon has a moving frame (its dashes change a few times a second), and the four corners of the health bar's frame move the same way (setting `AnimatedFrames`). Each picture is sized to sit inside its frame.
 
 </details>
 
