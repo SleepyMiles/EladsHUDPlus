@@ -8,7 +8,8 @@
 - Every icon in the status row (FrailtyPlus' injuries and the buffs from TZPPlus, Drinkable and FrailtyMedical) has a moving frame, like FrailtyPlus' own icons: its dashes change a few times a second. The pictures don't blink here. Setting `AnimatedFrames` (Status, on by default).
 - Optional: the health bar's four corners move with the icon frames (the same pieces, drawn in Elad's own pixel style: as sharp as his still frame). Setting `AnimatedHealthFrame` (Status, off by default).
 - Pictures that were so big they ran over their frame are made just small enough to sit inside it; the others keep their size.
-- Fixed: the detailed stamina text (`DetailedStamina = Full`) showed the plain vanilla rate (e.g. +6.7/sec) whatever changed it, without AdvancedCompany. It now shows the real rate: drinks, medical items, injuries and other mods' changes count.
+- Fixed: the detailed stamina text (`DetailedStamina = Full`) showed the plain vanilla rate (e.g. +6.7/sec) whatever changed it, without AdvancedCompany. It now shows the real rate, measured the same way AdvancedCompany does it: drinks, medical items, FrailtyPlus' leg injuries and other mods' changes count.
+- StatusApi: `ReportStaminaDelta(delta)` for mods that change stamina outside the game's own stamina update.
 
 </details>
 
