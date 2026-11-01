@@ -74,7 +74,7 @@ A row of icons under the health bar, with the `time left` or `value` on each:
 - Press `middle mouse` to show the cursor. The camera stops turning while it is shown.
 - Point at an icon in the status row to see `what it does` (in plain words, no exact numbers).
 - Doesn't open while a menu, the terminal or the chat is open.
-- Change the key, or make it hold-to-show, in the `Cursor` section.
+- Change the key, or make it hold-to-show, in the `General` section.
 
 </details>
 
@@ -115,14 +115,12 @@ A row of icons under the health bar, with the `time left` or `value` on each:
 
 | Section | What |
 |---|---|
-| General | Elad's original settings: HUD scale, auto-hide health bar, flashlight battery, stamina text, time left, planet info |
-| Status | warnings, Frailty injuries, buffs, colored buff numbers, injector stamina color, row position, animated frames |
-| Headwear | head item battery, show while off, flashlight icon gap, compact battery UI |
-| Outline | outline the HUD numbers |
-| Cursor | cursor key, hold to show |
-| UtilitySlot | next to the health bar, hide `[TAB]`, position |
+| General | HUD scale, planet info, outline the HUD numbers, cursor key and hold to show |
+| Health and Stamina | auto-hide health bar, how extra health shows, animated health bar corners, stamina text, injector stamina color |
+| Status icons | warnings, Frailty injuries, buffs, colored buff numbers, animated frames, icons per row, position |
+| Battery | flashlight battery, time left, head item battery, show while off, flashlight icon gap, compact battery UI |
+| Utility slot | next to the health bar, hide `[TAB]`, position |
 | Mic | show mic icon, show muted icon, icon style, position, size |
-| Health bar | how extra health shows on the bar and in the number |
 | Crosshair | on / off, frame and mark style, size, thickness, opacity, outline, when it shows, hide on interact |
 
 ---
